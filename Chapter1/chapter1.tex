@@ -1,0 +1,189 @@
+wes\chapter{Chapter 1}
+\label{ch:one}
+
+\section{Read Literature}
+\begin{itemize}
+	\item An Evaluation of the Suitability of FPGAs for Embedded Vision Systems, 2005
+	\item Embedded vision system for real-time object tracking using an asynchronous transient vision sensor, 2006
+	\item Stereo Vision System on Programmable Chip (SVSoC) for Small Robot Navigation, 2006
+	\item A 128x128 120dB 15$\mu$s Latency Asynchronous Temporal Contrast Vision Sensor, feb 2008
+	\item A Tele-operated Gesture Recognition Mobile Robot using a Stereo Vision, 2008
+	\item Smart cameras, 2010
+	\item Dynamic stereo vision system for real-time tracking, 2010
+	\item Accurate hardware-based stereo vision, 11.08.2010
+	\item Active vision in robotic systems: A survey of recent developments, 2011
+	\item PIXHAWK: A micro aerial vehicle design for autonomous flight using onboard computer vision, 23.02.2012
+	\item Low-cost FPGA stereo vision system for real time disparity maps calculation, 27.02.2012
+	\item Parallelization of Belief Propagation on Cell Processors for Stereo Vision, June 2012
+	\item An Overview to Visual Odometry and Visual SLAM: Applications to mobile robotics, 13.11.2015
+	\item Precise localisation of a UAV using visual odometry, December 2015
+	\item Potential-path approach for UAV with movable camera on-board, January 2017
+\end{itemize}
+
+\section{Summaries}
+\subsection{Dynamic stereo vision system for real-time tracking} \label{sec:DSV}
+\begin{itemize}
+\item paper describes an embedded system with two special vision sensors and a DSP
+\item objective is the tracking of objects in address-even representation
+\item intensity changes over time are registered as events
+\item events are grouped together with a bounding box to recognize moving objects
+\item recognized objects can be tracked
+\item use of AER reduces necessary computation power
+\item DVS very expensive
+\item use the event stream coming from the sensor, rectify pixels, put them in a time frame and match corresponding pixels
+\end{itemize}
+
+\subsection{Embedded vision system for real-time object tracking using an asynchronous transient vision sensor}
+\begin{itemize}
+\item uses DVS for monitoring of traffic and persons tracking
+\item uses event(pixel detecting intensity change) clusters to track objects
+\item every new event is added to a cluster and influences cluster center
+\item path of cluster is path of cluster center
+\end{itemize}
+
+\subsection{A 128x128 120dB 15$\mu$s Latency Asynchronous Temporal Contrast Vision Sensor}
+\begin{itemize}
+\item this paper describes a sensor that asynchronously detects intensity changes and sends the address of the corresponding pixel
+\item this includes circuit design, testing, previous work
+\item seems hard to replicate this exact idea on an fpga
+\item this is the DVS sensor used in the above paper
+\end{itemize}
+
+\subsection{Smart cameras}
+\begin{itemize}
+\item a book about all kinds of image sensors, image processing systems
+\item interesting chapter about embedded stereo vision
+\item extensively describes algorithm in \ref{sec:DSV}
+\end{itemize}
+
+\subsection{PIXHAWK: A micro aerial vehicle design for autonomous flight using onboard computer vision}
+\begin{itemize}
+	\item paper extensively describes a lightweight drone with a unusually powerfull computation platform
+	\item drone capable of using complex computer vision algorithms normally reserved for heavier drones
+	\item improves navigation by combining inertia measurment unit with computer vision data
+	\item objective is to build an autonomous drone that does all calculations online
+	\item article not wholly finished as extensively describes all aspects of design
+\end{itemize}
+
+\subsection{Parallelization of Belief Propagation on Cell Processors for Stereo Vision}
+\begin{itemize}
+	\item paper explains complicated algorithm that minimizes an energy function to find matching pixels between the two images of a camera pair
+	\item algorithm is rather complicated
+	\item algorithm is very accurate but needs a lot of resources
+	\item shows that the algorithm can be used on a multicore system using parallelization to achieve about 6 fps
+	\item necessary resources not available on ramstix, therefore not relevant
+\end{itemize}
+
+\subsection{A Tele-operated Gesture Recognition Mobile Robot using a Stereo Vision}
+\begin{itemize}
+	\item bad English, not very nice to read
+	\item service robot that recognizes face and hands and hand gestures
+	\item does computations on board and on a server
+	\item mention an FPGA but not clear if it is on the server or on the robot
+	\item main topic is an algorithm for face recognition and hand gesture recognition
+\end{itemize}
+
+\subsection{Low-cost FPGA stereo vision system for real time disparity maps calculation}
+\begin{itemize}
+	\item describes a complete system that performs stereo vision
+	\item implementation on a XlinixVirtex-4 XC4VLX60 FPGA chip
+	\item consists of image acquisition, image rectification, disparity computation and validation
+	\item reaches over 300 fps for a resolution of 640x480
+	\item claims to perform well while costing 1/10 of comparable systems
+\end{itemize}
+
+\subsection{Accurate hardware-based stereo vision}
+\begin{itemize}
+	\item article about a new algorithm for real-time systems to be implemented on FPGAs or ASICs
+	\item uses sum of absolute differences (SAD) in combination with a modified census transform (MCT)
+	\item these two are combined to get rather high accuracy for an embedded system while reaching a framrate of 60 fps
+	\item article complicated, explains used algorithm in detail
+	\item write an IP core for FPGAs that can be adapted to the size of the FPGA, this way it also fits on smaller FPGAs
+\end{itemize}
+
+\subsection{An Evaluation of the Suitability of FPGAs for Embedded Vision Systems}
+\begin{itemize}
+	\item looks at advantages and disadvantages of using FPGAs in an embedded computer vision context
+	\item FPGAs are very powerful when one can use parallelism
+	\item Seems to be the case for many computer vision algorithms
+	\item biggest disadvantage is the need to use fixed-point arithmetic
+	\item floating-point arithmetic is very costly
+	\item easy to make and change a design
+\end{itemize}
+
+\subsection{Stereo Vision System on Programmable Chip (SVSoC) for Small Robot Navigation}
+\begin{itemize}
+	\item describes a stereo vision system that recognizes obstacles and plans a possible path
+	\item uses three cameras together with a board that combines FPGA and DSP
+	\item stereo vision seems to be done only on FPGA
+	\item allows a hexapod drone to avoid obstacles
+\end{itemize}
+
+\subsection{Potential-path approach for UAV with movable camera on-board}
+\begin{itemize}
+	\item RAM report of Elisa Rimondi about a camera that stays focused on a high-feature view to improve localisation of drones
+	\item extensive with a lot of background information
+	\item stereo visual odometry search term for more suitable literature
+	\item explains different position systems such as GPS or odometry
+	\rro{How does visual odometry work?}
+	\rro{What does stereo vision add to visual odometry and when is it necessary?}
+	\item SLAM is the process of generating a map and simultaneously the position of a drone in it while both depend on each other
+	\rro{How important is SLAM for Aeroworks? Seems that map creation is not necessary}
+	\item active vision means that a drone actively chooses a path with a lot of features to reduce localisation uncertainty
+	\rro{active vision insofar relevant as it doesn't change the planned path, i.e. camera orientation changes to search high-feature areas}
+	\item uses Robot Operating System (ROS) 
+	\item ROS is a framework that basically provides a way of connecting different kinds of software elements as nodes
+	\item it provides topics that all nodes can publish to and read messages from
+	\item describes different forms of feature recognition
+	\rro{What criteria are important for the choice of a feature detector?}
+	\item every pixel in image gets an energy and the camera points at location with lowest energy to keep camera as stable as possible
+	\item extensive description of system architecture with all ros-nodes, coordinate systems and transformations
+	\item improves localisation by focussing camera on features
+	\item only achieves 15Hz because of ROS latency
+	\rro{How can frequency be improved?}
+	\item proposes using ROS2 in combination with global shutter high framerate camera with large field of view
+	\rro{Can stereo vision be done with large field of view? fish-eye lens?}
+	\item would be interesting to compare Elisa's method with other methods of odometry to evaluate performance and combine localisation data with other sensor data
+\end{itemize}
+
+\subsection{An Overview to Visual Odometry and Visual SLAM: Applications to mobile robotics}
+\begin{itemize}
+	\item recounts history of VO and VSLAM
+	\item VO: match features in different frames to compute translation matrix
+	\rro{How can that be implemented?}
+	\rro{How can VO data be combined with other sensor data to improve accuracy? (Kalman filter)}
+	\item RANSAC often used to improve feature detection
+	\rro{What is RANSAC? (see further below)}
+	\item explains different kinds of SLAM
+	\item explains different feature extraction algorithms and how to associate features in different frames
+	\rro{What are good criteria to choose the most suitable feature extraction algorithm and data association?}
+	\item RANSAC is an algorithm to find outliers in measurement data
+	\item Bundle Adjustment seeks to optimize camera pose and 3D structure parameters by minimizing a cost function
+\end{itemize}
+
+\subsection{Precise localisation of a UAV using visual odometry}
+\begin{itemize}
+	\item aims at using stereo vision on a UAV in combination with IMU for localisation
+	\item uses an AEROWORKS drone with vi-sensor
+	\item fuses SVO measurements with IMU with a kalman filter
+	\rro{How does a kalman filter work? (described in this paper)}
+	\item makes use of ROS
+	\item chooses between different implementation options for localisation and measurement fusion
+	\rro{What does noise look like in VO?}
+	\item uses an intel NUC i5 with Linux Ubuntu 14.04 and ROS Jade
+	\item SVO is fused with IMU data to get more accurate localisation and orientation of the drone
+	\item IMU has drift over time but SVO as well
+	\item when SVO fails, no pose is available, therefore backup pose estimation used
+	\item measurements from flight data
+	\item error in some directions bigger than in others, yaw introduces error
+	\item transformation between coordinate frames important
+	\item motors introduce noise for IMU
+	\item contains recommendations such as using more sensors or eliminating drift with SLAM
+	\rro{Other ways of reducing drift in VO?}
+\end{itemize}
+
+\subsection{Active vision in robotic systems: A survey of recent developments}
+\begin{itemize}
+	\item gives an overview of important development within the field of Active Vision in robotics
+	\item 
+\end{itemize}

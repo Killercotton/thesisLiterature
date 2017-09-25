@@ -1,0 +1,21 @@
+\select@language {american}
+\contentsline {chapter}{\numberline {1}Chapter 1}{2}{chapter.1}
+\contentsline {section}{\numberline {1.1}Read Literature}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}Summaries}{2}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Dynamic stereo vision system for real-time tracking}{2}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Embedded vision system for real-time object tracking using an asynchronous transient vision sensor}{2}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}A 128x128 120dB 15$\mu $s Latency Asynchronous Temporal Contrast Vision Sensor}{3}{subsection.1.2.3}
+\contentsline {subsection}{\numberline {1.2.4}Smart cameras}{3}{subsection.1.2.4}
+\contentsline {subsection}{\numberline {1.2.5}PIXHAWK: A micro aerial vehicle design for autonomous flight using onboard computer vision}{3}{subsection.1.2.5}
+\contentsline {subsection}{\numberline {1.2.6}Parallelization of Belief Propagation on Cell Processors for Stereo Vision}{3}{subsection.1.2.6}
+\contentsline {subsection}{\numberline {1.2.7}A Tele-operated Gesture Recognition Mobile Robot using a Stereo Vision}{3}{subsection.1.2.7}
+\contentsline {subsection}{\numberline {1.2.8}Low-cost FPGA stereo vision system for real time disparity maps calculation}{3}{subsection.1.2.8}
+\contentsline {subsection}{\numberline {1.2.9}Accurate hardware-based stereo vision}{4}{subsection.1.2.9}
+\contentsline {subsection}{\numberline {1.2.10}An Evaluation of the Suitability of FPGAs for Embedded Vision Systems}{4}{subsection.1.2.10}
+\contentsline {subsection}{\numberline {1.2.11}Stereo Vision System on Programmable Chip (SVSoC) for Small Robot Navigation}{4}{subsection.1.2.11}
+\contentsline {subsection}{\numberline {1.2.12}Potential-path approach for UAV with movable camera on-board}{4}{subsection.1.2.12}
+\contentsline {subsection}{\numberline {1.2.13}An Overview to Visual Odometry and Visual SLAM: Applications to mobile robotics}{5}{subsection.1.2.13}
+\contentsline {subsection}{\numberline {1.2.14}Precise localisation of a UAV using visual odometry}{5}{subsection.1.2.14}
+\contentsline {chapter}{\numberline {A}Appendix 1}{7}{appendix.A}
+\contentsline {section}{\numberline {A.1}Required TexLive packages}{7}{section.A.1}
+\contentsline {chapter}{Bibliography}{8}{hiddenchapter.2}

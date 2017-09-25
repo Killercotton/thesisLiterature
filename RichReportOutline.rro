@@ -1,0 +1,42 @@
+\LARGE
+\title{Rich Report Outline: literature research}
+\@title
+\author{Wolfgang Baumgartner}
+\normalsize
+\vspace{0.2in}
+
+\rroaddsection{chapter}{-}{\contentsname }
+\rroaddsection{chapter}{1}{Chapter 1}
+\rroaddsection{section}{1.1}{Read Literature}
+\rroaddsection{section}{1.2}{Summaries}
+\rroaddsection{subsection}{-}{Dynamic stereo vision system for real-time tracking}
+\rroaddsection{subsection}{-}{Embedded vision system for real-time object tracking using an asynchronous transient vision sensor}
+\rroaddsection{subsection}{-}{A 128x128 120dB 15$\mu $s Latency Asynchronous Temporal Contrast Vision Sensor}
+\rroaddsection{subsection}{-}{Smart cameras}
+\rroaddsection{subsection}{-}{PIXHAWK: A micro aerial vehicle design for autonomous flight using onboard computer vision}
+\rroaddsection{subsection}{-}{Parallelization of Belief Propagation on Cell Processors for Stereo Vision}
+\rroaddsection{subsection}{-}{A Tele-operated Gesture Recognition Mobile Robot using a Stereo Vision}
+\rroaddsection{subsection}{-}{Low-cost FPGA stereo vision system for real time disparity maps calculation}
+\rroaddsection{subsection}{-}{Accurate hardware-based stereo vision}
+\rroaddsection{subsection}{-}{An Evaluation of the Suitability of FPGAs for Embedded Vision Systems}
+\rroaddsection{subsection}{-}{Stereo Vision System on Programmable Chip (SVSoC) for Small Robot Navigation}
+\rroaddsection{subsection}{-}{Potential-path approach for UAV with movable camera on-board}
+\rroaddline{rro}{How does visual odometry work?}
+\rroaddline{rro}{What does stereo vision add to visual odometry and when is it necessary?}
+\rroaddline{rro}{How important is SLAM for Aeroworks? Seems that map creation is not necessary}
+\rroaddline{rro}{active vision insofar relevant as it doesn't change the planned path, i.e. camera orientation changes to search high-feature areas}
+\rroaddline{rro}{What criteria are important for the choice of a feature detector?}
+\rroaddline{rro}{How can frequency be improved?}
+\rroaddline{rro}{Can stereo vision be done with large field of view? fish-eye lens?}
+\rroaddsection{subsection}{-}{An Overview to Visual Odometry and Visual SLAM: Applications to mobile robotics}
+\rroaddline{rro}{How can that be implemented?}
+\rroaddline{rro}{How can VO data be combined with other sensor data to improve accuracy? (Kalman filter)}
+\rroaddline{rro}{What is RANSAC? (see further below)}
+\rroaddline{rro}{What are good criteria to choose the most suitable feature extraction algorithm and data association?}
+\rroaddsection{subsection}{-}{Precise localisation of a UAV using visual odometry}
+\rroaddline{rro}{How does a kalman filter work? (described in this paper)}
+\rroaddline{rro}{What does noise look like in VO?}
+\rroaddline{rro}{Other ways of reducing drift in VO?}
+\rroaddsection{chapter}{A}{Appendix 1}
+\rroaddsection{section}{A.1}{Required TexLive packages}
+\rroaddsection{chapter}{-}{\bibname \@mkboth {\MakeUppercase {\bibname }}{\MakeUppercase {\bibname }}}
